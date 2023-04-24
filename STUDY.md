@@ -1,5 +1,5 @@
 # Study annotation while developing.
-> This .md file is used to backtrack make **notes/flashcards/english words**.
+> This .md file is used to backtrack **notes/flashcards/english wzords**.
 
 
 ## 🔍🤔 What i learned from this project?
