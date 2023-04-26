@@ -2,6 +2,8 @@ import 'package:bin2dec/widgets/ButtonsRow.dart';
 import 'package:bin2dec/widgets/DigitsRow.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/components/DisplayValue.dart';
+
 class ConverterScreen extends StatefulWidget {
   const ConverterScreen({Key? key}) : super(key: key);
 
@@ -21,6 +23,7 @@ class _ConverterScreenState extends State<ConverterScreen> {
             Text("Click in the number box to switch between 0 and 1"),
             DigitsRow(),
             ButtonsRow(),
+            DisplayValue(),
           ],
         ),
       ),

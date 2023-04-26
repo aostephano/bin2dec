@@ -19,6 +19,8 @@ class ButtonsRow extends StatelessWidget {
             onPressed: () {
               //Provider viewPoint
               var binaryState = context.watch<BinaryListProvider>();
+              List<bool> binaryList = binaryState.binaryList;
+              binaryState.convertBinaryToDecimal(binaryList);
             },
             child: Text("Convert"),
           ),
@@ -27,7 +29,7 @@ class ButtonsRow extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text("Clear"),
+            child: Text("Reset"),
           ),
         ],
       ),
