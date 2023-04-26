@@ -75,7 +75,30 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-- **Consumer:** Instância a Cla
+- **Consumer:** Permite utilizar o Provider, finalmente. Recomenda-se que ele esteja alocado somente onde a informação da UI será alterado, pois deste modo ele não *rebuildará* todos os elementos da *Widget Tree*. 😃
+  
+```
+return Consumer<CartModel>(
+  builder: (context, cart, child) => Stack(
+    children: [
+      // Use SomeExpensiveWidget here, without rebuilding every time.
+      if (child != null) child,
+      Text('Total price: ${cart.totalPrice}'),
+    ],
+  ),
+  // Build the expensive widget here.
+  child: const SomeExpensiveWidget(),
+);
+```
+
+- **Provider.Of:** Caso não pretenda mostrar na UI o conteúdo alterado, pode utilizar Provider.of para manipular o dado e dar continuidade. A seguir, um exemplo com parâmetro **listen:false** apagando o conteúdo do carrinho:
+
+```
+Provider.of<CartModel>(context, listen: false).removeAll();
+```
+
+Um bom exemplo de uso do Provider State Manegament é [este](hhttps://www.kindacode.com/article/using-provider-for-state-management-in-flutter/#The_Code) de filmes de cinema.
+
 
 ## 📚 Content flashcards questions checklist:
 
@@ -83,8 +106,15 @@ class MyApp extends StatelessWidget {
 - [ ] Which is the diff between Imperative programming UI style and Declarative UI programming
   style?
 - [ ] What is the difference between Ephemeral Management State and App State?
-- [ ] Q4
+- [ ] Consumer and context.watch in MultiProvider?
 - [ ] Q5
+- [ ] Diff between?
+```
+context.watch<T>(): Make the widget listen to changes on T
+context.read<T>(): Returns T without listening to it
+ ``` 
+- [ ] aaa
+- [ ] 
 
 ```
 <code>
