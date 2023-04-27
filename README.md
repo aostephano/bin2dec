@@ -11,6 +11,7 @@
 [//]: # (![Bitbucket open pull requests]&#40;https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge&#41;)
 
 <img src="https://i.imgur.com/YgJbdKn.png" alt="exemplo imagem" width="40%">
+<img src="https://i.imgur.com/dkltzln.png" alt="exemplo imagem" width="40%">
 
 
 > Flutter App using Provider AppState Pattern
