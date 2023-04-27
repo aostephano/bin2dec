@@ -4,11 +4,9 @@
 
 ## 🔍🤔 What i learned from this project?
 
-### - A
-
-```
-<code>
-```
+>#### - How AppState work and which Packages manage then.
+>#### - How to use Provider AppState package properly.
+>#### - Folder Structure for Flutter project.
 
 ### - State Management (Dev > Data&Backend > State Mgmt)
 
@@ -102,32 +100,19 @@ Um bom exemplo de uso do Provider State Manegament é [este](hhttps://www.kindac
 
 ## 📚 Content flashcards questions checklist:
 
-- [ ] State Management definition.
-- [ ] Which is the diff between Imperative programming UI style and Declarative UI programming
+- [x] State Management definition.
+- [x] Which is the diff between Imperative programming UI style and Declarative UI programming
   style?
-- [ ] What is the difference between Ephemeral Management State and App State?
-- [ ] Consumer and context.watch in MultiProvider?
-- [ ] Q5
-- [ ] Diff between?
+- [x] What is the difference between Ephemeral Management State and App State?
+- [x] Consumer and context.watch in MultiProvider?
+- [x] Diff between?
 ```
 context.watch<T>(): Make the widget listen to changes on T
 context.read<T>(): Returns T without listening to it
- ``` 
-- [ ] aaa
-- [ ] 
-
-```
-<code>
-```
+ ```
 
 ## 📝 English flashcards checklist:
 
-- [ ] therefore
-- [ ] broadest
-- [ ] neatly
-- [ ] W4
-- [ ] W5
-
-```
-<code>
-```
+- [x] therefore
+- [x] broadest
+- [x] neatly
