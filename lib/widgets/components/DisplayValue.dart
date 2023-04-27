@@ -16,8 +16,7 @@ class _DisplayValueState extends State<DisplayValue> {
     //Provider viewPoint
     var binaryState = context.watch<BinaryListProvider>();
     List<bool> binaryList = binaryState.binaryList;
-    String decimalValue =
-        binaryState.convertBinaryToDecimal(binaryList).toString();
+    num decimalValue = binaryState.convertBinaryToDecimal(binaryList);
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,

@@ -22,7 +22,7 @@ class ButtonsRow extends StatelessWidget {
               List<bool> binaryList = binaryState.binaryList;
               binaryState.convertBinaryToDecimal(binaryList);
             },
-            child: Text("Convert"),
+            child: Text("Add to history"),
           ),
           SizedBox(
             width: 10,

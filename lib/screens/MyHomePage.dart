@@ -30,15 +30,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //Return to Add Page/Navybar
-          _currentIndex = 0;
-          _pageController.jumpToPage(0);
-        },
-        backgroundColor: Colors.blue,
-        child: const Icon(Icons.add),
-      ),
       appBar: AppBar(title: const Text("Binary 2 Decimal")),
       body: SizedBox.expand(
         child: PageView(

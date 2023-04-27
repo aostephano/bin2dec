@@ -25,11 +25,12 @@ class BinaryListProvider extends ChangeNotifier {
     num decimalValue = 0;
 
     boolList.asMap().forEach((index, value) {
-      num binValue = value.toString() as int;
-      num secondPar = pow(2, index.toString() as int);
+      num binValue = value ? 1 : 0;
+      num secondPar = pow(2, index);
       decimalValue += binValue * secondPar;
     });
 
+    notifyListeners();
     return decimalValue;
   }
 }
