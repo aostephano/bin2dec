@@ -18,9 +18,11 @@ class ButtonsRow extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               //Provider viewPoint
-              var binaryState = context.watch<BinaryListProvider>();
+              var binaryState =
+                  Provider.of<BinaryListProvider>(context, listen: false);
               List<bool> binaryList = binaryState.binaryList;
-              binaryState.convertBinaryToDecimal(binaryList);
+              num decimalValue = binaryState.convertBinaryToDecimal(binaryList);
+              binaryState.saveConvertOnHistory(binaryList, decimalValue);
             },
             child: Text("Add to history"),
           ),

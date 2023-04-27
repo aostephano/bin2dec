@@ -21,6 +21,7 @@ class _DisplayValueState extends State<DisplayValue> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Text("Decimal Value: "),
         Text("$decimalValue"),
       ],
     );

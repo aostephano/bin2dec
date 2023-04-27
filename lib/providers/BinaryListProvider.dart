@@ -15,6 +15,8 @@ class BinaryListProvider extends ChangeNotifier {
     false
   ];
 
+  Map convertHistory = {};
+
   void changeBinValue(int idx) {
     binaryList[idx] ? binaryList[idx] = false : binaryList[idx] = true;
     // debugPrint(binaryList.toString());
@@ -23,14 +25,29 @@ class BinaryListProvider extends ChangeNotifier {
 
   num convertBinaryToDecimal(List<bool> boolList) {
     num decimalValue = 0;
+    List<bool> revBoolList = boolList.reversed.toList();
 
-    boolList.asMap().forEach((index, value) {
-      num binValue = value ? 1 : 0;
-      num secondPar = pow(2, index);
-      decimalValue += binValue * secondPar;
-    });
+    revBoolList.asMap().forEach(
+      (index, value) {
+        num binValue = value ? 1 : 0;
+        num secondPar = pow(2, index);
+        decimalValue += binValue * secondPar;
+        debugPrint("---------------");
+      },
+    );
 
     notifyListeners();
     return decimalValue;
+  }
+
+  void saveConvertOnHistory(List<bool> binList, num decimalValue) {
+    String binValue = '';
+    for (var bin in binList) {
+      num auxValue = bin ? 1 : 0;
+      binValue += auxValue.toString();
+    }
+    convertHistory[binValue] = decimalValue.toString();
+
+    debugPrint(convertHistory.toString());
   }
 }

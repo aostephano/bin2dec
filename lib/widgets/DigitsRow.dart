@@ -1,7 +1,5 @@
 import 'package:bin2dec/widgets/components/SquareInput.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../providers/BinaryListProvider.dart';
 
 class DigitsRow extends StatefulWidget {
   const DigitsRow({Key? key}) : super(key: key);

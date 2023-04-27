@@ -1,4 +1,5 @@
 import 'package:bin2dec/screens/pages/ConverterScreen.dart';
+import 'package:bin2dec/screens/pages/HistoryScreen.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           children: const <Widget>[
             ConverterScreen(),
-            ConverterScreen(),
+            HistoryScreen(),
           ],
         ),
       ),

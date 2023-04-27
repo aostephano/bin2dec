@@ -17,10 +17,13 @@ class _SquareInputState extends State<SquareInput> {
   Widget build(BuildContext context) {
     //Provider viewPoint
     var binaryState = context.watch<BinaryListProvider>();
+    _boolValueController = binaryState.binaryList[widget.idx];
+
     return Expanded(
       flex: 1,
       child: OutlinedButton(
         onPressed: () {
+          _boolValueController = binaryState.binaryList[widget.idx];
           _boolValueController
               ? _boolValueController = false
               : _boolValueController = true;
