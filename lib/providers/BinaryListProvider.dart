@@ -50,4 +50,9 @@ class BinaryListProvider extends ChangeNotifier {
 
     debugPrint(convertHistory.toString());
   }
+
+  void resetBinValue() {
+    binaryList = [false, false, false, false, false, false, false, false];
+    notifyListeners();
+  }
 }

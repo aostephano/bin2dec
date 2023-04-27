@@ -30,7 +30,11 @@ class ButtonsRow extends StatelessWidget {
             width: 10,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              var binaryState =
+                  Provider.of<BinaryListProvider>(context, listen: false);
+              binaryState.resetBinValue();
+            },
             child: Text("Reset"),
           ),
         ],
